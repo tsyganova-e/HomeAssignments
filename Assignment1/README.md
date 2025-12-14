@@ -4,7 +4,7 @@
 ## Contacts
 st142266@spbu.student.ru
 ## Description
-Home assingment 1 - extended "Hello world". First says "Hello, World". After this reads a string in a cycle and says "Hell, "
+Home assingment 1 - extended "Hello world". First says "Hello, World". After this reads a string in a cycle and says "Hello, "
 ## Build
 make
 ## Run
