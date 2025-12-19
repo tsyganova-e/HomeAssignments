@@ -169,3 +169,64 @@ TEST(MatrixTest, Transpose_Rational) {
     EXPECT_EQ(t(2, 1).numerator(), 11);
     EXPECT_EQ(t(2, 1).denominator(), 12);
 }
+TEST(RationalTest, TestInvariance) {
+    Rational r1(1, 2);
+    Rational r2(2, 4);
+    EXPECT_EQ(r1.numerator(), r2.numerator());
+    EXPECT_EQ(r1.denominator(), r2.denominator());
+
+    Rational r3(3, 4);
+    Rational r4(-3, -4);
+    EXPECT_EQ(r3.numerator(), r4.numerator());
+    EXPECT_EQ(r3.denominator(), r4.denominator());
+
+    Rational r5(5, 6);
+    Rational r6(-10, -12);
+    EXPECT_EQ(r5.numerator(), r6.numerator());
+    EXPECT_EQ(r5.denominator(), r6.denominator());
+
+    Rational r7(0, 1);
+    Rational r8(0, 52);
+    EXPECT_EQ(r7.numerator(), r8.numerator());
+    EXPECT_EQ(r7.denominator(), r8.denominator());
+
+    Rational r9(-7, 8);
+    Rational r10(7, -8);
+    EXPECT_EQ(r9.numerator(), r10.numerator());
+    EXPECT_EQ(r9.denominator(), r10.denominator());
+
+    Rational r11(-9, 10);
+    Rational r12(18, -20);
+    EXPECT_EQ(r11.numerator(), r12.numerator());
+    EXPECT_EQ(r11.denominator(), r12.denominator());
+
+    Rational a = Rational(5, 1);  // Явное создание
+    EXPECT_EQ(a.numerator(), 5);
+    EXPECT_EQ(a.denominator(), 1);
+    
+    Rational b = Rational(25, 5);
+    EXPECT_EQ(b.numerator(), 5);
+    EXPECT_EQ(b.denominator(), 1);
+
+    Rational c = Rational(0, 1);
+    EXPECT_EQ(c.numerator(), 0);
+    EXPECT_EQ(c.denominator(), 1);
+    
+    Rational d = Rational(0, 52);
+    EXPECT_EQ(d.numerator(), 0);
+    EXPECT_EQ(d.denominator(), 1);
+}
+
+TEST(RationalTest, TestOperations) {
+    Rational r1 = Rational(1, 4) + Rational(1, 6);
+    EXPECT_EQ(r1.numerator(), 5);
+    EXPECT_EQ(r1.denominator(), 12);
+
+    Rational r2 = Rational(1, 4) - Rational(1, 6);
+    EXPECT_EQ(r2.numerator(), 1);
+    EXPECT_EQ(r2.denominator(), 12);
+
+    Rational r3 = Rational(3, 4) * Rational(5, 6);
+    EXPECT_EQ(r3.numerator(), 5);
+    EXPECT_EQ(r3.denominator(), 8); 
+}
