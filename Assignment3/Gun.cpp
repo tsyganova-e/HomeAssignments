@@ -5,7 +5,7 @@
 */
 #include "Gun.h"
 
-Gun::Gun(std::string model, int ammo) {}
+Gun::Gun(std::string model, int ammo) : model_(model), ammo_(ammo) {}
 Gun::~Gun() {}
 
 void Gun::setModel(const std::string& model) { model_ = model; }

@@ -1,8 +1,9 @@
 /*
-*Elena Tsyganova
-*st142266@student.spbu.ru
-*Assignment3
+* Elena Tsyganova
+* st142266@student.spbu.ru
+* Assignment3
 */
+
 #include "gtest/gtest.h"
 #include "Decepticon.h"
 #include "Engine.h"
