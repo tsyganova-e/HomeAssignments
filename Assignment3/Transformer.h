@@ -39,7 +39,7 @@ class Transformer {
   void setGun(Gun* gun);
   Gun* getGun();
 
-  Engine getEngine();
+  Engine getEngine() const;
 
  private:
   std::string name_;

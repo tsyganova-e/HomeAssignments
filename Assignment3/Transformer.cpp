@@ -32,4 +32,4 @@ bool Transformer::getArmor() { return armor_; }
 void Transformer::setGun(Gun* gun) { gun_ = gun; }
 Gun* Transformer::getGun() { return gun_; }
 
-Engine Transformer::getEngine() { return engine_; }
+Engine Transformer::getEngine() const { return engine_; }
