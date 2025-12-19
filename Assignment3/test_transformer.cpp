@@ -49,25 +49,3 @@ TEST(TransformerTest, BasicMethods)
     ASSERT_TRUE(t.Transform());
 }
 
-TEST(TransformerTest, GetEngineReturnsCopy)
-{
-    Engine engine("V8", 1000);
-    Gun gun("Laser", 50);
-    Transformer t("Optimus", 5, 100, 50, true, engine, &gun);
-    auto engineCopy = t.getEngine();
-    
-    ASSERT_EQ(engineCopy.getType(), "V8");
-    ASSERT_EQ(engineCopy.getPower(), 1000);
-    
-    engineCopy.setPower(2000);
-    
-    ASSERT_EQ(t.getEngine().getPower(), 1000);
-    
-    ASSERT_EQ(engineCopy.getPower(), 2000);
-    
-    engineCopy.setType("V12");
-    
-    ASSERT_EQ(t.getEngine().getType(), "V8");
-    
-    ASSERT_EQ(engineCopy.getType(), "V12");
-}
